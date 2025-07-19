@@ -5,7 +5,7 @@ import {
   BiLogoGmail,
 } from "react-icons/bi";
 import { Link } from "react-router-dom";
-import shoppyLogo from "../assets/shoppyglobe.png";
+import shoppyLogo from "../assets/shoppyGlobe.png";
 
 export default function Footer() {
   return (
