@@ -12,7 +12,7 @@ import store from "./utils/store.js";
 const ProductList = lazy(() => import("./components/ProductList.jsx"));
 const ProductDetails = lazy(() => import("./components/ProductDetails.jsx"));
 const Cart = lazy(() => import("./components/Cart.jsx"));
-const CheckoutPage = lazy(() => import("./components/CheckOut.jsx"));
+const CheckoutPage = lazy(() => import("./components/Checkout.jsx"));
 const OrdersHistory = lazy(() => import("./components/Orders.jsx"));
 
 const appRouter = createBrowserRouter([
