@@ -13,7 +13,6 @@ const ProductDetails = () => {
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const defaultErr = `Product with id '${id}' not found`;
 
   // fetching product details using ID
   const fetchProduct = async () => {
@@ -131,7 +130,7 @@ const ProductDetails = () => {
         Product Overview
       </h1>
       {/* Product Display Card */}
-      <div className="relative max-w-3xl m-auto  bg-white shadow-xl border border-gray-200 rounded-xl  grid grid-cols-1 md:grid-cols-2">
+      <div className="relative max-w-3xl m-auto  bg-white shadow-xl border border-gray-200 rounded-xl grid grid-cols-1 md:grid-cols-2">
         <div className=" flex flex-col w-full h-full bg-blue-50 justify-center items-center">
           <img
             src={images[0] || thumbnail}

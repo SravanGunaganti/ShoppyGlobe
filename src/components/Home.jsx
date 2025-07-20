@@ -17,12 +17,12 @@ export default function Home() {
   return (
     <div className="min-h-screen flex flex-col">
       {/*Hero Section */}
-      <section className="min-h-[calc(100vh-80px)] md:min-h-[calc(100vh-88px)] bg-white flex flex-col-reverse md:flex-row items-center justify-end lg:justify-between max-w-6xl mx-auto p-6 lg:p-12">
+      <section className="min-h-[calc(100vh-80px)] portrait:flex-col-reverse md:min-h-[calc(100vh-88px)] bg-white flex flex-col-reverse md:flex-row items-center justify-end lg:justify-between max-w-6xl mx-auto p-6 lg:p-12">
         <div className="w-full lg:w-1/2 text-center lg:text-left">
-          <h1 className="text-4xl lg:text-5xl text-gray-800 mb-4">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl text-gray-800 mb-4">
             Elevate Your Shopping Experience
           </h1>
-          <p className="text-gray-600 text-lg lg:text-xl mb-6">
+          <p className="text-gray-600 text-md md:text-lg lg:text-xl mb-6">
             Discover the best products, unbeatable prices, and seamless
             checkout.
           </p>
