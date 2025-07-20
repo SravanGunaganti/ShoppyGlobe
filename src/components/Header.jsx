@@ -22,7 +22,7 @@ function Header() {
           <Link
             to="/"
             className="flex items-center space-x-3 rtl:space-x-reverse">
-            <img src={shoppyLogo} alt="Shoppy Globe Logo" className="h-8 min-[360px}:h-12" />
+            <img src={shoppyLogo} alt="Shoppy Globe Logo" className="max-[350px]:h-8 h-12" />
             <span className="text-xl min-[360px]:text-2xl font-self text-blue-900 whitespace-nowrap ">
               ShoppyGlobe
             </span>

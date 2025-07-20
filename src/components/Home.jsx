@@ -17,7 +17,7 @@ export default function Home() {
   return (
     <div className="min-h-screen flex flex-col">
       {/*Hero Section */}
-      <section className="min-h-fit bg-white flex flex-col-reverse md:flex-row items-center justify-end lg:justify-between max-w-6xl mx-auto p-6 lg:p-12">
+      <section className="min-h-[60vh] bg-white flex flex-col-reverse md:flex-row items-center justify-end lg:justify-between max-w-6xl mx-auto p-6 lg:p-12">
         <div className="w-full lg:w-1/2 text-center lg:text-left">
           <h1 className="text-xl min-[360px]:text-3xl md:text-4xl lg:text-5xl text-gray-800 mb-2 min-[360px]:mb-4">
             Elevate Your Shopping Experience
@@ -50,6 +50,9 @@ export default function Home() {
 
       {/* Features Section */}
       <section className=" py-12" ref={moreRef}>
+                <h2 className="max-[350px]:text-xl text-3xl text-center text-gray-800 mb-6 px-6 lg:px-12">
+            Services
+          </h2>
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 p-6 lg:p-12">
           <div className="flex flex-col items-center text-center p-6 bg-gray-50 border-gray-200 border rounded-2xl shadow-md hover:shadow-lg transition">
             <BiRocket size={48} className="text-blue-600 mb-4" />

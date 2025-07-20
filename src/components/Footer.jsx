@@ -15,7 +15,7 @@ export default function Footer() {
           <Link
             to="/"
             className="flex items-center space-x-3 rtl:space-x-reverse mb-2">
-            <img src={shoppyLogo} alt="Shoppy Globe Logo" className="h-12" />
+            <img src={shoppyLogo} alt="Shoppy Globe Logo" className="max-[350px]:h-8 h-12" />
             <span className="max-[350px]:text-xl text-2xl font-self text-blue-900 whitespace-nowrap">
               ShoppyGlobe
             </span>
