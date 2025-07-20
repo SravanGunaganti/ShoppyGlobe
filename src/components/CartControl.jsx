@@ -41,16 +41,16 @@ export default function CartControl({ product, handleItem = () => {} }) {
     <div className="w-full grid grid-cols-3 flex-grow items-center gap-2">
       <button
         onClick={handleDecrement}
-        className="flex rounded-lg h-full justify-center shadow-xl items-center col-span-1 px-2 py-2 w-full bg-red-100 border border-red-600 hover:bg-red-200">
+        className="flex rounded-lg h-full justify-center shadow-xl items-center col-span-1 max-[350px]:p-1 p-2 w-full bg-red-100 border border-red-600 hover:bg-red-200">
         <BiMinus className="text-red-600" />
       </button>
-      <span className="rounded-lg text-blue-600 text-center py-1 text-xl text-shadow-lg">
+      <span className="rounded-lg text-blue-600 text-center py-1 max-[350px]:text-lg text-xl text-shadow-lg">
         {cartItem.quantity}
       </span>
       <button
         disabled={cartItem.quantity >= cartItem.stock}
         onClick={handleIncrement}
-        className="rounded-lg flex h-full shadow-xl disabled:opacity-40 items-center bg-green-100 justify-center  col-span-1 px-2 py-2 w-full border border-green-600 hover:bg-green-200">
+        className="rounded-lg flex h-full shadow-xl disabled:opacity-40 items-center bg-green-100 justify-center  col-span-1 max-[350px]:p-1 p-2 w-full border border-green-600 hover:bg-green-200">
         <BiPlus className="text-green-600" />
       </button>
     </div>

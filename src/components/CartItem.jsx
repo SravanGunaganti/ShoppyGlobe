@@ -29,14 +29,14 @@ function CartItem({ item }) {
       </div>
       <div className="flex-1 p-4 flex flex-col justify-between">
         <div>
-          <h2 className="text-md sm:text-lg lg:text-lg  text-gray-800 mb-1">
+          <h2 className="max-[350px]:text-sm text-base sm:text-lg lg:text-lg  text-gray-800 mb-1">
             {item.title}
           </h2>
           <p className="text-gray-500 text-xs sm:text-sm mb-3">Brand: {item.brand}</p>
         </div>
         <div className="flex gap-4 items-center justify-between mb-4">
           <div>
-            <span className="text-2xl font-self  text-blue-600 mr-2">
+            <span className="max-[350px]:text-lg text-2xl font-self  text-blue-600 mr-2">
               ${discountedPrice}
             </span>
             <span className="text-sm line-through text-gray-400">

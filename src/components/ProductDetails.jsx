@@ -126,7 +126,7 @@ const ProductDetails = () => {
 
   return (
     <section className="flex flex-col justify-center items-center h-fit w-full p-4">
-      <h1 className="text-blue-600 font-self text-3xl md:text-4xl text-center  my-4">
+      <h1 className="text-blue-600 font-self max-[350px]:text-xl text-3xl md:text-4xl text-center  my-4">
         Product Overview
       </h1>
       {/* Product Display Card */}
@@ -139,14 +139,14 @@ const ProductDetails = () => {
           />
         </div>
         <div className="flex flex-col gap-1 p-4">
-          <h2 className="text-lg md:text-xl ">{title}</h2>
+          <h2 className="max-[350px]:text-base text-lg md:text-xl ">{title}</h2>
           {brand && (
-            <p className="text-sm text-gray-600">
+            <p className="max-[350px]:text-xs text-sm text-gray-600">
               <span className="">Brand: </span> {brand}
             </p>
           )}
           <div className="flex items-center">
-            <span className="text-xl  text-blue-600 mr-2">
+            <span className="max-[350px]:text-lg text-xl  text-blue-600 mr-2">
               ${discountedPrice}
             </span>
             <span className="text-sm line-through text-gray-400">
@@ -157,7 +157,7 @@ const ProductDetails = () => {
             </span>
           </div>
           <div className="flex items-center">
-            <span className="text-yellow-500 text-md ">
+            <span className="text-yellow-500 max-[350px]:text-sm text-base ">
               {"★".repeat(Math.round(Number(rating)))}{" "}
               <span className="text-black">{rating.toFixed(1)}/5</span>
             </span>
@@ -166,7 +166,7 @@ const ProductDetails = () => {
             </span>
           </div>
           <div className="mb-2">
-            <h3 className="">Tags:</h3>
+            <h3 className="mb-1 max-[350px]:text-sm">Tags:</h3>
             <div className="flex flex-wrap gap-2">
               {tags.map((tag) => (
                 <span
@@ -199,7 +199,7 @@ const ProductDetails = () => {
           {!isAdded ? (
             <button
               onClick={() => handleAddCart(product)}
-              className={`flex items-center justify-center text-center gap-3 px-3 py-2 rounded-lg bg-blue-600 text-white `}>
+              className={`max-[350px]:text-sm flex items-center justify-center text-center gap-3 px-3 py-2 rounded-lg bg-blue-600 text-white `}>
               <BiCart size={30} />
               Add To Cart
             </button>
@@ -209,16 +209,16 @@ const ProductDetails = () => {
           {isAdded && (
             <Link
               to="/cart"
-              className={`flex items-center justify-center text-center gap-3 px-3 py-2 mt-2 rounded-lg bg-blue-600 text-white `}>
-              Go To Cart <BiCart size={30} />
+              className={`max-[350px]:text-sm flex items-center justify-center text-center gap-3 px-3 py-2 mt-2 rounded-lg bg-blue-600 text-white `}>
+              Go To Cart <BiCart className=" max-[350px]:w-[20px] max-[350px]:h-[20px] h-[30px] w-[30px]" />
             </Link>
           )}
           <div>
-            <h3 className="text-blue-600">Description:</h3>
-            <p className="text-md text-gray-600 font-outfit">{description}</p>
+            <h3 className="max-[350px]:text-base text-blue-600">Description:</h3>
+            <p className="max-[350px]:text-sm text-base text-gray-600 font-outfit">{description}</p>
           </div>
 
-          <div className="mb-4 text-sm text-gray-700 space-y-1">
+          <div className="mb-4 max-[350px]:text-xs text-sm text-gray-700 space-y-1">
             <div>
               <span className="">Weight:</span> {weight}g
             </div>

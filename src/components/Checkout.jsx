@@ -107,17 +107,17 @@ export default function CheckoutPage() {
     return (
       <div className="fixed inset-0 flex flex-col items-center text-center justify-center min-h-screen bg-green-50 p-6">
         <BiCheckCircle className="text-green-600" size={80} />
-        <h2 className="text-3xl font-self   mt-4 mb-2 text-gray-800">
+        <h2 className="max-[350px]:text-xl text-3xl font-self   mt-4 mb-2 text-gray-800">
           Thank you for your order!
         </h2>
-        <p className="text-gray-600 mb-6">Redirecting to your orders...</p>
+        <p className="max-[350px]:text-sm text-gray-600 mb-6">Redirecting to your orders...</p>
       </div>
     );
   }
 
   return (
     <section className="w-full p-4">
-      <h1 className="text-3xl text-center font-self  text-blue-500 mb-8">Checkout</h1>
+      <h1 className="max-[350px]:text-xl text-3xl text-center font-self  text-blue-500 mb-8">Checkout</h1>
 
       <div className="max-w-2xl  mx-auto p-4 bg-white rounded-2xl shadow-lg">
         {/* Progress Bar for 3 steps */}
@@ -126,14 +126,14 @@ export default function CheckoutPage() {
             <React.Fragment key={st}>
               <div className="flex flex-col items-center">
                 <div
-                  className={`w-10 h-10 flex items-center justify-center rounded-full ${
+                  className={`max-[350px]:text-sm w-10 h-10 flex items-center justify-center rounded-full ${
                     step >= st
                       ? "bg-blue-600 text-white"
                       : "bg-gray-200 text-gray-600"
                   }`}>
                   {st}
                 </div>
-                <span className="text-sm mt-2 capitalize">
+                <span className="max-[350px]:text-xs text-sm mt-2 capitalize">
                   {st === 1 ? "Shipping" : st === 2 ? "Payment" : "Review"}
                 </span>
               </div>
@@ -156,10 +156,10 @@ export default function CheckoutPage() {
                 onChange={handleChange}
                 value={form.name}
                 placeholder="Full Name"
-                className="w-full p-3 border border-gray-400 outline-none focus:border-2 rounded-lg"
+                className="max-[350px]:p-2 w-full p-3 max-[350px]:text-sm border border-gray-400 outline-none focus:border-2 rounded-lg"
               />
               {errors.name && (
-                <p className="text-red-500 text-sm mt-1">{errors.name}</p>
+                <p className="text-red-500 max-[350px]:text-xs text-sm mt-1">{errors.name}</p>
               )}
             </div>
             <div>
@@ -168,10 +168,10 @@ export default function CheckoutPage() {
                 onChange={handleChange}
                 value={form.address}
                 placeholder="Address"
-                className="w-full p-3 border border-gray-400 outline-none focus:border-2 rounded-lg"
+                className="max-[350px]:p-2 w-full p-3 max-[350px]:text-sm border border-gray-400 outline-none focus:border-2 rounded-lg"
               />
               {errors.address && (
-                <p className="text-red-500 text-sm mt-1">{errors.address}</p>
+                <p className="text-red-500 max-[350px]:text-xs text-sm mt-1">{errors.address}</p>
               )}
             </div>
             <div className="grid grid-cols-2 max-w-full gap-4">
@@ -181,10 +181,10 @@ export default function CheckoutPage() {
                   onChange={handleChange}
                   value={form.city}
                   placeholder="City"
-                  className="p-3 border border-gray-400 outline-none focus:border-2 rounded-lg"
+                  className="p-3 border max-[350px]:p-2  max-[350px]:text-sm border-gray-400 outline-none focus:border-2 rounded-lg"
                 />
                 {errors.city && (
-                  <p className="text-red-500 text-sm mt-1">{errors.city}</p>
+                  <p className="text-red-500 max-[350px]:text-xs text-sm mt-1">{errors.city}</p>
                 )}
               </div>
               <div className="flex flex-col">
@@ -193,10 +193,10 @@ export default function CheckoutPage() {
                   onChange={handleChange}
                   value={form.zip}
                   placeholder="ZIP Code"
-                  className="p-3 border border-gray-400 outline-none focus:border-2 rounded-lg"
+                  className="p-3 border max-[350px]:p-2 max-[350px]:text-sm border-gray-400 outline-none focus:border-2 rounded-lg"
                 />
                 {errors.zip && (
-                  <p className="text-red-500 text-sm mt-1">{errors.zip}</p>
+                  <p className="text-red-500 max-[350px]:text-xs text-sm mt-1">{errors.zip}</p>
                 )}
               </div>
             </div>
@@ -243,10 +243,10 @@ export default function CheckoutPage() {
                           ? "MM/YY"
                           : "CVV"
                       }
-                      className="w-full p-3 border border-gray-400 outline-none focus:border-2 rounded-lg"
+                      className="w-full max-[350px]:p-2 p-3 border max-[350px]:text-sm border-gray-400 outline-none focus:border-2 rounded-lg"
                     />
                     {errors[field] && (
-                      <p className="text-red-500 text-sm mt-1">
+                      <p className="text-red-500 max-[350px]:text-xs text-sm mt-1">
                         {errors[field]}
                       </p>
                     )}
@@ -261,15 +261,15 @@ export default function CheckoutPage() {
                   onChange={handleChange}
                   value={form.upi}
                   placeholder="UPI ID"
-                  className="w-full p-3 border border-gray-400 outline-none focus:border-2 rounded-lg"
+                  className="w-full max-[350px]:text-sm max-[350px]:py-2 p-3 border border-gray-400 outline-none focus:border-2 rounded-lg"
                 />
                 {errors.upi && (
-                  <p className="text-red-500 text-sm mt-1">{errors.upi}</p>
+                  <p className="text-red-500 max-[350px]:text-xs text-sm mt-1">{errors.upi}</p>
                 )}
               </div>
             )}
             {paymentMethod === "cod" && (
-              <p className="text-gray-600 text-center">
+              <p className="max-[350px]:text-sm text-gray-600 text-center">
                 You will pay with cash upon delivery.
               </p>
             )}
@@ -282,7 +282,7 @@ export default function CheckoutPage() {
               {cartItems.map((item) => (
                 <div
                   key={item.id}
-                  className="flex justify-between text-sm md:text-md text-gray-700">
+                  className="flex justify-between text-sm md:text-base text-gray-700">
                   <span>
                     {item.title} x {item.quantity} :{" "}
                   </span>
@@ -310,7 +310,7 @@ export default function CheckoutPage() {
           {step > 1 ? (
             <button
               onClick={handleBack}
-              className="px-6 py-3 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300">
+              className="max-[350px]:text-sm max-[350px]:py-2 px-6 py-3 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300">
               Back
             </button>
           ) : (
@@ -319,13 +319,13 @@ export default function CheckoutPage() {
           {step < 3 ? (
             <button
               onClick={handleNext}
-              className="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600">
+              className="max-[350px]:text-sm max-[350px]:py-2 max-[350px]:px-4 px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600">
               Next
             </button>
           ) : (
             <button
               onClick={handlePlaceOrder}
-              className="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600">
+              className="max-[350px]:text-sm max-[350px]:py-2 max-[350px]:px-4 px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600">
               Place Order
             </button>
           )}

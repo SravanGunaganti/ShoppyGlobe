@@ -11,7 +11,7 @@ export default function Orders() {
 
   return (
     <section className="max-w-4xl w-full mx-auto p-4 mt-4">
-      <h1 className="text-2xl font-self text-center md:text-left md:text-4xl  text-blue-500 mb-6">
+      <h1 className="max-[350px]:text-xl text-2xl font-self text-center md:text-left md:text-4xl  text-blue-500 mb-6">
         Order History
       </h1>
       {/*Dispalying list of orders by sending order data to child OrderItem */}

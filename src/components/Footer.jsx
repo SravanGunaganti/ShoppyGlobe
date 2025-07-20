@@ -16,11 +16,11 @@ export default function Footer() {
             to="/"
             className="flex items-center space-x-3 rtl:space-x-reverse mb-2">
             <img src={shoppyLogo} alt="Shoppy Globe Logo" className="h-12" />
-            <span className="text-2xl font-self text-blue-900 whitespace-nowrap">
+            <span className="max-[350px]:text-xl text-2xl font-self text-blue-900 whitespace-nowrap">
               ShoppyGlobe
             </span>
           </Link>
-          <p className="text-sm">© 2025 ShoppyGlobe. All rights reserved.</p>
+          <p className="max-[350px]:text-xs text-sm">© 2025 ShoppyGlobe. All rights reserved.</p>
         </div>
         {/* Navigation Links */}
         <div className="flex flex-wrap justify-center md:justify-start gap-6 mb-6 md:mb-0">

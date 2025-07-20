@@ -30,7 +30,7 @@ function ProductItem({ product, addToCart }) {
         className="w-full p-2 max-w-[300px] text-xs rounded-lg mx-auto h-70 hover:scale-[1.1]  hover:sticky transition object-contain"
       />
       <div className="p-4 bg-white flex flex-col justify-between">
-        <h2 className="text-md  mb-2 md:truncate">{title}</h2>
+        <h2 className="text-base  mb-2 md:truncate">{title}</h2>
         <div className="w-full">
           <div className="flex items-center mb-2">
             <span className="text-xl font-self text-blue-600 mr-2">
@@ -44,7 +44,7 @@ function ProductItem({ product, addToCart }) {
             </span>
           </div>
           <div className="flex items-center mb-2">
-            <span className="text-yellow-500 text-md ">
+            <span className="text-yellow-500 text-base ">
               {"★".repeat(Math.round(Number(rating)))}{" "}
               <span className="text-black">{rating.toFixed(1)}/5</span>
             </span>
@@ -77,7 +77,7 @@ function ProductItem({ product, addToCart }) {
               to={`/products/${id}`}
               className={`${
                 isAdded && "w-full"
-              } text-center bg-white hover:bg-gray-100 text-blue-600 border border-blue-600 px-4 py-2 rounded-lg shadow-lg transition`}>
+              } text-center bg-white max-[350px]:text-sm hover:bg-gray-100 text-blue-600 border border-blue-600 px-4 py-2 rounded-lg shadow-lg transition`}>
               View Details
             </Link>
 
@@ -87,7 +87,7 @@ function ProductItem({ product, addToCart }) {
                   addToCart(product);
                   setIsAdded(true);
                 }}
-                className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 flex-grow rounded-lg border border-blue-600 shadow-lg transition">
+                className="bg-blue-600 hover:bg-blue-700 text-white max-[350px]:text-sm px-4 py-2 flex-grow rounded-lg border border-blue-600 shadow-lg transition">
                 Add To Cart
               </button>
             ) : (

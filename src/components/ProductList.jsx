@@ -131,18 +131,18 @@ function ProductList() {
           showFilters && "grid"
         } grid-cols-1 md:grid-cols-2 gap-4 items-center mb-4`}>
         <div className="col-sapn-1 md:grid-cols-2 flex-1 w-full px-3 py-2 border border-gray-400 rounded-lg flex items-center min-w-[250px]">
-          <FaSearch className="text-gray-500 text-sm md:text-md mr-2" />
+          <FaSearch className="text-gray-500  text-sm md:text-base mr-2" />
           <input
             type="text"
             placeholder="Search products..."
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            className="w-full outline-none"
+            className="w-full outline-none max-[350px]:text-sm"
           />
         </div>
         {/* Filters Panel */}
         {showFilters && (
-          <div className="grid grid-cols-2 h-full text-sm md:text-md w-full gap-4">
+          <div className="grid grid-cols-2 h-full max-[350px]:text-xs text-sm md:text-base w-full gap-4">
             <div className="col-span-1 flex justify-center items-center border h-full border-gray-400 rounded-md px-3 py-2">
               <select
                 value={sortKey}
@@ -173,12 +173,12 @@ function ProductList() {
         <div className="flex items-center gap-2 mb-4">
           <button
             onClick={() => scroll("left")}
-            className="left-0 text-2xl rounded-full bg-white border border-gray-400 text-gray-600 ml-2">
+            className="left-0 max-[350px]:text-xl text-2xl rounded-full bg-white border border-gray-400 text-gray-600 ml-2">
             <BiChevronLeft />
           </button>
           <div
             ref={scrollRef}
-            className="flex justify-start gap-3 text-sm md:text-md  max-w-full overflow-x-auto scrollbar-hide">
+            className="flex justify-start gap-3 max-[350px]:text-xs text-sm md:text-base  max-w-full overflow-x-auto scrollbar-hide">
             {categories?.map((cat) => (
               <button
                 key={`catbtn${cat}`}
@@ -195,14 +195,14 @@ function ProductList() {
           </div>
           <button
             onClick={() => scroll("right")}
-            className=" bg-white border brder-gray-400 text-gray-600 right-0 rounded-full  z-10 text-2xl mr-2">
+            className="max-[350px]:text-xl bg-white border brder-gray-400 text-gray-600 right-0 rounded-full  z-10 text-2xl mr-2">
             <BiChevronRight />
           </button>
         </div>
       )}
 
       {/* Toggle & Reset Filters */}
-      <div className="flex justify-between items-center mb-4 text-sm md:text-md">
+      <div className="flex justify-between items-center mb-4 max-[350px]:text-xs text-sm md:text-base">
         <button
           onClick={() => setShowFilters(!showFilters)}
           className="flex items-center gap-2 px-4 py-2 bg-blue-600 shadow-lg text-white rounded-lg hover:bg-blue-700 transition">
@@ -244,7 +244,7 @@ function ProductList() {
       )}
 
       {totalPages > 1 && (
-        <div className="mt-8 flex justify-center text-md items-center space-x-2">
+        <div className="mt-8 flex justify-center text-base items-center space-x-2">
           <button
             onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
             disabled={currentPage === 1}

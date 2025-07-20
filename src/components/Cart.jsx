@@ -27,7 +27,7 @@ export default function Cart() {
 
   return (
     <section className="max-w-5xl w-full mx-auto p-4">
-      <h1 className="text-2xl font-self text-center md:text-left md:text-4xl  text-blue-500 mb-6">
+      <h1 className="max-[350px]:text-xl text-2xl font-self text-center md:text-left md:text-4xl  text-blue-500 mb-6">
         Shopping Cart
       </h1>
 
@@ -45,22 +45,22 @@ export default function Cart() {
 
         {/*Order Summary */}
         <div className="bg-white rounded-2xl shadow-md p-4 flex flex-col">
-          <h2 className="text-2xl  text-gray-800 mb-4">Order Summary</h2>
+          <h2 className="max-[350px]:text-xl text-2xl  text-gray-800 mb-4">Order Summary</h2>
           <div className="flex justify-between mb-2">
-            <span className="text-gray-600 text-xl">
+            <span className="text-gray-600 max-[350px]:text-lg  text-xl">
               Items ({cartItems.length})
             </span>
-            <span className=" text-xl text-gray-800">Total: ${total}</span>
+            <span className="max-[350px]:text-lg text-xl text-gray-800">Total: ${total}</span>
           </div>
-          <div className="border-t border-gray-200 my-4"></div>
+          <div className=" border-t border-gray-200 my-4"></div>
           <button
             onClick={() => dispatch(clearCart())}
-            className="w-full py-2 mb-4 bg-red-100 text-red-600 hover:text-white  rounded-lg hover:bg-red-600 transition border border-red-600">
+            className="max-[350px]:text-sm w-full py-2 mb-4 bg-red-100 text-red-600 hover:text-white  rounded-lg hover:bg-red-600 transition border border-red-600">
             Clear Cart
           </button>
           <button
             onClick={() => navigate("/checkout")}
-            className="w-full py-2 bg-blue-500 text-white  rounded-lg hover:bg-blue-700 transition border border-blue-600">
+            className="max-[350px]:text-sm w-full py-2 bg-blue-500 text-white  rounded-lg hover:bg-blue-700 transition border border-blue-600">
             Proceed to Checkout
           </button>
         </div>
