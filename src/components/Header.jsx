@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import shoppyLogo from "../assets/logo.png";
+import shoppyLogo from "../assets/shoppyGlobe.png";
 import { useSelector } from "react-redux";
 import { FaBarsStaggered } from "react-icons/fa6";
 import { IoCloseSharp } from "react-icons/io5";

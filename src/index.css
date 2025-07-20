@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+/* Custom font faces */
 @font-face {
   font-family: "Outfit-bold";
   font-weight: 600;
@@ -32,6 +33,7 @@
 
 }
 
+/* Base styling for the root container */
 #root{
   background-color: #ecf3ff;
   min-height:100vh;
@@ -42,6 +44,7 @@ body{
   font-family: var(--font-self), sans-serif;
 }
 
+/* Scrollbar styling */
 ::-webkit-scrollbar {
   width: 4px;
   height: 4px;
@@ -60,6 +63,7 @@ body{
   background-color: black;
 }
 
+/*Hiding Scrollbar*/
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
